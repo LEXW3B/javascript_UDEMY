@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>calcular</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
 </head>
-<body>
-    
-</body>
+    <body>
+        <h1>Lógica de Programação JavaScript</h1>
+
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button>
+        
+        <div id="output"></div>
+
+        <script>
+            console.log('testanto meu codigo');
+
+            var n1 =  prompt('Digite um número: ');
+            n1 = parseFloat(n1);
+            debugger;
+            escreve();
+
+            function escreve(){
+                //debugger;
+                console.log('-----------------');
+                
+                console.log(n1);
+            }
+
+            function calcular(simbolo){
+                var n = prompt('Digite outro número: ');
+
+                switch(simbolo){
+                    case '+':
+                        n1 = n1 + n;
+                        break;
+                    case '-':
+                        n1 = n1 - n;
+                        break;
+                    case '*':
+                        n1 = n1 * n;
+                        break;
+                    case '/':
+                        n1 = n1 / n;
+                        break;
+                }
+                escreve();
+            }
+        </script>
+    </body>
 </html>
