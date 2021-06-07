@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JavaScript</h1>        
+    </body>
+    <script>
+        function somar(n1, n2){
+            return n1 + n2;
+        }  
+        
+        var somar = somar(10, 20);
+        console.log('resultado: ', somar);
+
+        somar.teste = 'propriede da funcao';
+
+        console.log('somar.teste');
+
+        var teste = function(){
+            console.log('teste');
+        };
+        teste();
+    </script>
+</html>
