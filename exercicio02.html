@@ -18,9 +18,16 @@
     </body>
     <script>
         (function(){
-            function calcularIMC(peso, altura){
-                return peso / (altura*2);
+            function calcularIMC(peso, altura, callback){
+                var imc = peso / (altura*2);
+
+                if(callback && typeof callback === 'function'){
+                    return callback(imc);
+                }
+                console.log('nao passou callback');
+                return imc;
             }
+            
             function classificacaoIMC(IMC){
                 if(IMC<=16.9){
                     return 'muito abaixo do peso';
@@ -38,6 +45,12 @@
                     return 'obesidade III';
                 }
             }
+            var peso = 65;
+            var altura = 1.75;
+
+            var imc = calcularIMC(peso, altura, classificacaoIMC);
+            console.log('classificacao IMC: ', imc);
+
         })();
     </script>
 </html>
