@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JavaScript</h1>        
+    </body>
+    <script>
+        (function(){
+
+            function calcularMedia(){
+                
+                var total = 0;
+                var qtd   = arguments.length;//serve para retornar os valores q estao dentro do calcularMedia
+                var x = 0;
+                //while ( arguments[x])RESOLUÇÃO FRAGIL
+                while ( typeof arguments[x] === 'number'){
+                    total += arguments[x];
+                    x++;
+                }
+
+                return total / qtd;    
+            }
+
+            var media1 = calcularMedia(2, 3);
+            var media2 = calcularMedia(2, 3, 10, 6);
+
+            console.log('media1: ', media1);
+            console.log('media2: ', media2);
+        })()
+        
+    </script>
+</html>
