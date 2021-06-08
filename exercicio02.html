@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JavaScript</h1>        
+    </body>
+    <script>
+        (function(){
+            function calcularIMC(peso, altura){
+                return peso / (altura*2);
+            }
+            function classificacaoIMC(IMC){
+                if(IMC<=16.9){
+                    return 'muito abaixo do peso';
+                } else if(IMC<=18.4){
+                    return 'abaixo do peso';
+                } else if(IMC<=24.9){
+                    return 'normal';
+                } else if(IMC<=29.9){
+                    return 'acima do peso';
+                } else if(IMC<=34.9){
+                    return 'obesidade I';
+                } else if(IMC<=40){
+                    return 'obesidade II';
+                } else{
+                    return 'obesidade III';
+                }
+            }
+        })();
+    </script>
+</html>
