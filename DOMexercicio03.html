@@ -16,16 +16,17 @@
     <body>
         <h1>JavaScript</h1>
         
-        <input type="text" id="txtNome">
-        
+        <input type="text" id="txtNome" value="digite o nome"><button onclick="escreve()">Só clica</button>
+
         <div id="msg"></div>
-    </body>
-    <script>
-        var txtNome2;
-        (function(){
-            'use strict';
+
+        <script>
+           
             var txtNome2 = document.querySelector('#txtNome');
-            document.querySelector('#msg').innerHTML = 'bem vindo <b>' + nome + '</b>';
-        })();
-    </script>
+            function escreve(){
+                var nome = txtNome2.value;
+                document.querySelector('#msg').innerHTML = 'bem vindo, <b>' + nome + '</b>';
+            }
+        </script>
+    </body>    
 </html>
