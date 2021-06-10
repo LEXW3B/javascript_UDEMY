@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Alexandre">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+    <title>JavaScript Objeto</title>
     <style>
         body{
             font-family: sans-serif;font-size: 20px;
@@ -17,6 +17,47 @@
         <h1>JavaScript</h1>        
     </body>
     <script>
-        var minhaStr = 'daniel';
+        var hoje = new Date();
+        var x = [0];
+
+        function mudaX(x){
+            debugger
+            var y = x;
+            y.push(2);
+            x.push(3);
+            console.log('mudaX: ');
+            console.log(x);
+            console.log(y);
+        }
+
+        mudaArr(x);
+
+        console.log('-------------');
+
+        var n = 0;
+        function mudaN(n){
+            var n2 = n;
+            console.log(++n2);
+        }
+        mudaN(n);
+        console.log(n);
+
+        console.log('-----------');
+
+        function mudarCor(cor){
+            console.log(this);
+            this.cor = cor;
+        }
+
+        var caneta1 = {
+            cor: 'red',
+            mudarCor: mudarCor
+        }
+        var caneta2 = {
+            cor: 'blue',
+            mudarCor: mudarCor
+        }
+        caneta1.mudarCor('green');
+        console.log(caneta1);
     </script>
 </html>
