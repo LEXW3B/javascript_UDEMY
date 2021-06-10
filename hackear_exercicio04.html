@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <main>
+            
+            <header><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatum ipsam facere inventore beatae molestias incidunt autem itaque minima temporibus provident commodi, magni quidem quia soluta aperiam dolores voluptas veniam.</p></header>
+            <nav><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, rem. Nihil necessitatibus est, modi facere adipisci cumque labore eaque illo atque doloribus perferendis, iste numquam. Nemo dignissimos repellat alias quod?</p></nav>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos placeat, quod veniam labore accusantium dolorum expedita dolor ut, magnam, ea aliquam libero dicta in! Libero perferendis quibusdam magnam eaque repudiandae!</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis velit quo dignissimos dolorem sapiente possimus? Molestias modi tempora alias officia praesentium eveniet quo magni, architecto mollitia commodi rem a.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis velit quo dignissimos dolorem sapiente possimus? Molestias modi tempora alias officia praesentium eveniet quo magni, architecto mollitia commodi rem a.</p>
+        </main>
+        <script>
+            (function(){
+                'use strict';
+
+                var paragrafo = document.querySelectorAll('p');
+                //fazendo loop
+                var x =0;
+                //enquanto ouver paragrafo no indice X faça...e some +1
+                while(paragrafo[x]){
+                    paragrafo[x].textContent = x + ' - Essa pagina foi hackeado por EU'
+                    x++;
+                }
+            })();
+        </script>
+        
+    </body>
+</html>
