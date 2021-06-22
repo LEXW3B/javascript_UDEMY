@@ -15,13 +15,22 @@
 </head>
     <body>
         <div>
-            <h1>Curso de JavaScript UDEMY</h1>
+            <div class="container">
+                <h1>Curso de JavaScript UDEMY</h1>
 
-            <button id="btn1" onclick="clicar()">botao 1</button>
-            <button id="btn2">botao 2</button>
-            <button id="btn3"onclick="alert('onclick no atributo'botao 3</button>
-        </div>
+                <button id="btn1" onclick="clicar()">botao 1</button>
+                <button id="btn2">botao 2</button>
 
+
+
+                <button id="btn3" onclick="alert('mundo');">botao3</button>
+            </div>
+            
+            <div class="container">
+                <h1>propagação d evento</h1>
+            </div>
+
+            <div id="d1" style="background: red; padding: 25px;">texto dentro da div<span style="background: yellow;">texto dentro da span</span></div>
         <script>
 
             var btn2 = document.getElementById('btn2');
@@ -46,7 +55,9 @@
             btn3.onclick=function(){
                 alert('mundo');
             }
-
+            
+            var $d1 = document.querySelector(#d1);
+            var $d1Span = document.querySelector('#d1 span');
         </script>    
     </body>
 </html>
