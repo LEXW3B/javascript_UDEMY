@@ -20,18 +20,20 @@
 
         <script>
             function Caneta(preco, cor){
+                //propriedades privadas
                 var color     = cor || 'black';
-                this.preco    = preco || 1;
-                     
+                //propriedades publicas
+                this.preco    = preco || 1;                     
                 this.mudarCor = function(cor){
-                    color  = cor;
-                } 
-            }
-
-            this.pegaCor = function(){
+                   if(cor !== 'red' && cor !== 'blue' && cor !== 'black'){
+                       return;
+                    }
+                    color = cor;
+                }
+                this.pegaCor = function(){
                 return color;
+                }
             }
-
             var caneta1 = new Caneta(2 , 'red');
 
         </script> 
