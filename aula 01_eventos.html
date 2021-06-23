@@ -56,8 +56,19 @@
                 alert('mundo');
             }
             
-            var $d1 = document.querySelector(#d1);
+            var $d1 = document.querySelector('#d1');
             var $d1Span = document.querySelector('#d1 span');
+
+            $d1.addEventListener('click', function(){
+                console.log('click no $d1');
+            });
+            $d1Span.addEventListener('click', function(){
+                console.log('click no $d1Span');
+            });
+            document.addEventListener('click', function(){
+                console.log('clicou no document');
+            })
+
         </script>    
     </body>
 </html>
