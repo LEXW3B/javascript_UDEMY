@@ -27,7 +27,7 @@
             </div>
             
             <div class="container">
-                <h1>propagação d evento</h1>
+                <h1>propagação de evento</h1>
             </div>
 
             <div id="d1" style="background: red; padding: 25px;">texto dentro da div<span style="background: yellow;">texto dentro da span</span></div>
@@ -59,15 +59,20 @@
             var $d1 = document.querySelector('#d1');
             var $d1Span = document.querySelector('#d1 span');
 
-            $d1.addEventListener('click', function(){
+            $d1.addEventListener('click', function(evt){
                 console.log('click no $d1');
-            });
+                evt.stopPropagation();
+            }, false);
             $d1Span.addEventListener('click', function(){
                 console.log('click no $d1Span');
-            });
-            document.addEventListener('click', function(){
+            }, false);
+            document.addEventListener('click', function(evt){
                 console.log('clicou no document');
-            })
+                console.log(evt.currentTarget);
+                console.log(this);
+                console.log(evt.target);
+
+            }, false)
 
         </script>    
     </body>
