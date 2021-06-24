@@ -17,17 +17,18 @@
         <div class="container">
             <h1>JavaScript</h1>
 
-            <textarea id="msg"></textarea>
+            <textarea id="msg" cols="50" rows="10"></textarea>
         </div>        
 
         <script>
             (function(){
                 'user strict';
                 var $txtMsg = document.getElementById('msg');
-                
+
                 $txtMsg.addEventListener('keypress', keypress);
                 $txtMsg.addEventListener('keyup', keyup);
-                $txtMsg.addEventListener('keydow', keydow);
+                $txtMsg.addEventListener('keydown', keydown);
+                $txtMsg.addEventListener('input', input);
 
                 function keypress(e){
                     console.log('keypress', this.value);
@@ -37,8 +38,12 @@
                     console.log('keyup', this.value);
 
                 }
-                function keydow(e){
+                function keydown(e){
                     console.log('keydow', this.value);
+
+                }
+                function input(e){
+                    console.log('input', this.value);
 
                 }
 
