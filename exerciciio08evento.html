@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <h1>JavaScript</h1>
+
+            <textarea id="msg"></textarea>
+        </div>        
+
+        <script>
+            (function(){
+                'user strict';
+                var $txtMsg = document.getElementById('msg');
+                
+                $txtMsg.addEventListener('keypress', keypress);
+                $txtMsg.addEventListener('keyup', keyup);
+                $txtMsg.addEventListener('keydow', keydow);
+
+                function keypress(e){
+                    console.log('keypress', this.value);
+                    
+                }
+                function keyup(e){
+                    console.log('keyup', this.value);
+
+                }
+                function keydow(e){
+                    console.log('keydow', this.value);
+
+                }
+
+            })()
+        </script>      
+    </body>    
+</html>
