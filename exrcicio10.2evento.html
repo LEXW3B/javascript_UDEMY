@@ -55,8 +55,12 @@
                 }
 
                 function addTask(){
-                    var task = '<li>' + $txtTask.value + '</li>';
-                    $ul.innerHTML += task;
+
+                    var li = document.createElement('li');
+                    var text = document.createTextNode($txtTask.value);
+
+                    li.appendChild(text);
+                    $ul.appendChild(li);
 
                     $txtTask.value = '';
                     $txtTask.focus();
