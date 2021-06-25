@@ -11,6 +11,7 @@
             font-family: sans-serif;font-size: 20px;
             background: grey;
         }
+        .done{text-decoration: line-through; color: #555;}
     </style>
 </head>
     <body>
@@ -34,6 +35,7 @@
                 'user strict';
 
                 var $ul = document.querySelector('ul');
+                var $lis = document.querySelectorAll('li');
                 var $txtTask = document.querySelector('#txtTask');
                 var $btn = document.querySelector('#btn');
 
@@ -42,7 +44,15 @@
                     if(e.keyCode === 13){
                         addTask();
                     }
-                })
+                });
+
+                for(var i = 0; i < $lis; i++){
+                    $lis[i].addEventListener('click', toogleDone)
+                }
+
+                function toogleDone(){
+                    this.classList.toggle('done');
+                }
 
                 function addTask(){
                     var task = '<li>' + $txtTask.value + '</li>';
