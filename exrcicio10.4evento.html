@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+        .done{text-decoration: line-through; color: #555;}
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <h1>JavaScript</h1>
+
+            <input type="text" id="txtTask" style="margin: 20px;">
+            <button id="btn">Cadastrar tarefa</button>
+
+            <ul>
+                <li>Estudar javascript-DOM</li>
+                <li>Estudar eventos em javascript</li>
+                <li>Jogar video-game</li>
+            </ul>
+        
+        </div>
+        
+        
+        <script>
+            (function(){
+                'user strict';
+
+                var $ul = document.querySelector('ul');
+                var $lis = document.querySelectorAll('li');
+                var $txtTask = document.querySelector('#txtTask');
+                var $btn = document.querySelector('#btn');
+
+                $btn.addEventListener('click', addTask);
+                $txtTask.addEventListener('keyup', function(e){
+                    if(e.keyCode === 13){
+                        addTask();
+                    }
+                });
+
+                $ul.addEventListener('click', function(e){
+                    if(e.target.nodeName === "LI"){
+                        toogleDone(e.target)
+                    }
+                })
+
+                function toogleDone(li){
+                    li.classList.toggle('done');
+                }
+
+                function addTask(){
+
+                    var li = document.createElement('li');
+                    var text = document.createTextNode($txtTask.value);
+
+                    li.appendChild(text);
+                    $ul.appendChild(li);
+
+                    $txtTask.value = '';
+                    $txtTask.focus();
+                    
+                }
+            })()
+        </script>      
+    </body>    
+</html>
