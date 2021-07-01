@@ -96,6 +96,35 @@
 
             arr.unshift(true, false, 'unshift');//retira o primeiro elemento e troca por novos via parametro
             console.log(arr);
+
+
+
+            var somaDeArr = numeros.reduce(function(anterior , atual){
+                return anterior + atual;//soma de elementos
+            })            
+            console.log(numeros);
+            console.log(somaDeArr);
+
+
+
+            var testeReduce = ['1','2','3','4','5',].reduceRight(function(i, a){
+                return i+a;//inverte a ordem dos elementos string
+            })
+            console.log(testeReduce);
+
+
+
+            var arr = [10,20,30];
+            arr.reverse();//inverte a ordem dos elementos number
+            console.log(arr);
+
+
+            console.log(arr2.slice(2,5));//faz iniciar depois do indice escolhido ate o elemento que escolheu
+
+
+            console.log(arr2);
+            arr2.splice(2, 0, 'limao', 'melao');//inicia apos o segundo elemento, nao retira elemento porque esta zero, e insere elemento no terceiro parametro
+            console.log(arr2);
             
         </script>
     </body>
