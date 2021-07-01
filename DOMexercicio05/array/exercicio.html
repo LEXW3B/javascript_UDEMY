@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <title>Array</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+            padding: 1em;
+        }th{
+            width: 5em;
+        }.table {
+            border: 1px solid black;
+            background-color: white;
+        }
+        .aluno-nome{
+            width: 2em;
+            margin: 2em;
+            border: 1px solid black;
+            background: grey;
+
+        }.aluno-n1{
+            width: 2em;
+            text-align: center;
+            border: 1px solid black;
+            background: grey;
+        }.aluno-n2{
+            width: 2em;
+            text-align: center;
+            border: 1px solid black;
+            background: grey;
+        }.aluno-n3{
+            width: 2em;
+            text-align: center;
+            border: 1px solid black;
+            background: grey;
+        }.aluno-n4{
+            width: 2em;
+            text-align: center;
+            border: 1px solid black;
+            background: grey;
+        }.aluno-m{
+            width: 2em;
+            text-align: center;
+            border: 1px solid black;
+            font: gold;
+            background: red;
+        }
+    </style>
+    <script src="beluga.js"></script>
+    
+</head>
+    <body>
+        <h1>JavaScript</h1>  
+        
+        <section>
+        	<div class="container">
+	        
+		      	<h2>Média dos alunos</h2>
+				<table class="table js-tabela">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Nota 1</th>
+							<th>Nota 2</th>
+							<th>Nota 3</th>
+							<th>Nota 4</th>
+							<th>Média</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="aluno" >
+							<td class="aluno-nome">Gertrude</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">9</td>
+							<td class="aluno-n4">7.5</td>	
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno" >
+							<td class="aluno-nome">Rey</td>
+							<td class="aluno-n1">5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">6.5</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno" >
+							<td class="aluno-nome">Jessilda</td>
+							<td class="aluno-n1">8</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">0</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno">
+							<td class="aluno-nome">Lindóia</td>
+							<td class="aluno-n1">6.5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+						<tr class="aluno" >
+							<td class="aluno-nome">Creysson</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">9.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">8.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+					</tbody>
+				</table>
+	        	
+        	</div>	
+        </section>
+
+        <script>
+            
+            (function(){
+                'use strict'
+                var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+
+				var x = 0;
+				while(trs[x]){
+					var linhaAluno = trs[x];
+                    var tds = linhaAluno.querySelectorAll('td');
+					var notas = recuperarNumerosDeColunas(tds);                    
+
+                    var temZero = notas.some(function(nota){
+                        return nota === 0;
+                    });
+                    var mensagem = temZero ? 'reprovado' : calcularMedia.apply(this, notas);
+                    
+                    linhaAluno.querySelector('.aluno-m').textContent = mensagem;
+					x++;
+                }
+                function recuperarNumerosDeColunas(tds){
+                    var x= 0;
+                    var arr = [];
+                    while( tds[x] ){
+                        if( !isNaN( tds[x].textContent ) && tds[x].textContent !== '' ){
+                            arr.push( parseFloat(tds[x].textContent ) );
+                        }
+                        x++;
+                    }
+                    return arr;
+                }
+            })()        
+        </script>
+    </body>
+</html>
