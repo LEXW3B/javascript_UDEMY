@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+            padding: 1em;
+        }
+    </style>
+    <script>
+        (function(){
+            window.addEventListener('load', init);//serve para dar a ordem de iniciar o dom e so depois iniciar o javascript.
+
+            function init(){
+                var $paragrafos = document.querySelectorAll('p');
+                //fazer loop
+                var x = 0;
+                while($paragrafos[x]){
+                    $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                    x++;
+                }
+            }
+            function formatarTexto(texto){
+                var numeroMaximoCaracteres = 56;
+                if(texto.length <= numeroMaximoCaracteres){
+                    return texto;
+                }
+
+                var subTexto = texto.slice(0, numeroMaximoCaracteres);
+                return subTexto + '...';
+            }
+        })()
+    </script>
+</head>
+    <body>
+
+        <h1>JavaScript</h1> 
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam asperiores optio sunt laboriosam, velit eos magni dolorum ducimus sed nisi facere beatae eveniet quas quibusdam, ipsum exercitationem unde quidem ea?</p>
+        
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium quae modi aliquid nulla rerum ipsum, magnam saepe in fugiat doloremque doloribus nostrum quos. Magni voluptatum non blanditiis eligendi veritatis?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    </body>
+    <script></script>
+</html>
