@@ -31,23 +31,23 @@
 
 
             var arr = ['1', 200,2,3,4,5,'gdasghdg',200,"30"];//vai me retornar se tiver ao menos com 1 true
-            //var aoMenosUmNumero = arr.some(function(elemento){                
-            //    return typeof elemento === 'number';
-            //})
-            //console.log(aoMenosUmNumero);
+            var aoMenosUmNumero = arr.some(function(elemento){                
+                return typeof elemento === 'number';
+            })
+            console.log(aoMenosUmNumero);
 
 
 
-            //var numeros = arr.filter(function(el, i, obj){//vai filtrar as string e retonar so numero
-            //    return typeof el ==='number';
-            //})
-            //console.log(numeros);
+            var numeros = arr.filter(function(el, i, obj){//vai filtrar as string e retonar so numero
+                return typeof el ==='number';
+            })
+            console.log(numeros);
 
 
 
-            //arr.forEach(function(el, i, obj){
-            //    console.log('el=', el, ' | i=', i,' | i - ', arr.toString());
-            //})
+            arr.forEach(function(el, i, obj){
+                console.log('el=', el, ' | i=', i,' | i - ', arr.toString());
+            })
 
 
 
@@ -58,6 +58,22 @@
 
             var posicaoStr2 = arr.lastIndexOf(200);//se o número for repedito, saber sua última posição
             console.log(200, posicaoStr2);
+
+
+            console.log(numeros);//vai multiplicar o elemento pelo indicie
+            numeros = numeros.map(function(el, i, obj){
+                return el * i;
+            })
+            console.log(numeros);
+
+
+
+            var arr2 = arr.concat(numeros);//vai juntar duas ou mais array em uma só
+            console.log(arr2);
+
+            var str = arr2.join(' -- ');//transforma numa string e posso passar caracteres por ex:. --
+            console.log(str);
+            
         </script>
     </body>
 </html>
