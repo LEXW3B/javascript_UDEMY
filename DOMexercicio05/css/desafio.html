@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-theme.css">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
+</head>
+    <body>        
+        
+        <div class="container">
+            
+            <h1>JavaScript</h1>
+            
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod! 123</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam dolores assumenda sint officia molestias placeat id laudantium harum. Dicta, facilis esse ad qui praesentium architecto consequuntur hic amet magnam iusto?</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, incidunt ad. Sint a adipisci quasi. Iure ea incidunt, laboriosam saepe perspiciatis repellat assumenda cum totam esse modi, omnis necessitatibus quod!</p>
+
+
+            <p>Lorem ipsum dolor sit amet </p>
+
+
+        </div>
+        <script>
+
+            var paragrafo = document.querySelectorAll('p');
+
+            for(var i = 0; i < paragrafo.length; i++){
+                paragrafo[i].innerHTML = formataParagrafo(paragrafo[i].innerHTML);
+            }
+            function formataParagrafo(texto){
+                var arr = texto.split(' ');
+                console.log(arr);
+
+                if(arr.length > 10){
+                    return arr.slice(0, 10).join(' ') + '...';
+                }
+                return texto;
+            }
+        </script>
+    </body>
+    
+</html>
