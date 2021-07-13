@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JavaScript</h1> 
+        <div></div>
+        
+        <script>
+
+            var n = 0;
+
+            function somaUm(){
+                console.log('n', ++n);
+                
+                if(n > 10){
+                clearInterval(intervalo);
+                }
+            }            
+
+        //    setTimeout(function(){
+        //        console.log('n', n);
+        //    }, 1000);
+        //    setInterval(somaUm, 1000);
+
+        var timeout = setTimeout(somaUm, 1000);
+        alert(timeout)
+
+        var intervalo = setInterval(somaUm, 1000);
+
+        console.log(intervalo)
+
+        var str = '';
+        var d = document.querySelector('div');
+        var timeoutTest = setTimeout(function(){
+
+            for (var i = 0; i < 1000; i++){
+                str += "i: " + i + "--";
+                d.textContent += str;
+            } 
+
+        }, 3000)
+        </script>       
+    </body>    
+</html>
