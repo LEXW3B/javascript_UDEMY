@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+        }
+        .banner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 1000px rgba(0, 0, 0, .8);
+            display: none;
+        }
+        .banner__close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JavaScript</h1>
+
+        <div class="banner">
+            <h2>Banner Irritante</h2>
+            <button class="banner__close">X</button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum laborum nulla voluptate, itaque, quisquam eum consectetur dolorum corporis repellat officiis debitis ullam nihil. Incidunt, minima. Doloremque tempore omnis nostrum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum laborum nulla voluptate, itaque, quisquam eum consectetur dolorum corporis repellat officiis debitis ullam nihil. Incidunt, minima. Doloremque tempore omnis nostrum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum laborum nulla voluptate, itaque, quisquam eum consectetur dolorum corporis repellat officiis debitis ullam nihil. Incidunt, minima. Doloremque tempore omnis nostrum?</p>
+        </div>
+        
+        <script>
+
+            (function(){
+
+                var $banner = document.querySelector('.banner');
+                var $bannerBtn = document.querySelector('.banner__close');
+
+                $bannerBtn.addEventListener('click', escondeBanner);
+
+                var intervaloEsconde = null;
+
+                function mostraBanner(){
+                    $banner.style.display = 'block';
+
+                    intervaloEsconde = setTimeout(escondeBanner, 10000);
+                }
+
+                function escondeBanner(){
+                    $bannerBtn.removeEventListener('click', escondeBanner);
+                    $banner.parentNode.removeChild($banner);
+
+                    clearTimeout(intervaloEsconde);
+                }
+
+                setTimeout(mostraBanner, 5000);
+
+                
+            })()
+        </script>      
+    </body>    
+</html>
