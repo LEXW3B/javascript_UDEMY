@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+            padding: 1em;
+        }
+        .teste{
+            background: red;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JavaScript</h1>
+
+        <div class="teste" style='background: green'>apenas um teste</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reprehenderit, itaque eos veritatis nihil exercitationem, tempora expedita in repudiandae magnam atque ipsam animi, necessitatibus alias magni at. Hic, aliquam quia.</p>
+
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores soluta a molestiae dolores eligendi, commodi ex blanditiis accusamus, laudantium amet nulla impedit? In ad eum voluptates sapiente, quidem totam temporibus.</p>
+
+        <div class="teste2">teste 2</div>
+        
+        <script>
+            var $teste = document.querySelector('.teste');
+            console.log('bg: ', $teste.style.background);
+
+            console.log('computado: ', getComputedStyle($teste).background)
+
+            var $p = document.querySelector('p');
+            console.log($p.offsetHeight, $p.offsetWidth);
+            console.log($p.offsetLeft, $p.offsetTop);
+
+            var $teste2 = document.querySelector('.teste2');
+            
+            console.log($teste2.offsetLeft, $teste2.offsetTop);
+            console.log($teste2.getBoundingClientRect());
+
+        </script>      
+    </body>    
+</html>
