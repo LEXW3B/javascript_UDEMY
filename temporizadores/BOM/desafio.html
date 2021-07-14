@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexandre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style type="text/css">
+        body{
+            font-family: sans-serif;font-size: 20px;
+            background: grey;
+            padding: 1px;
+            padding-top: 150px;
+        }.menu{
+            height: 150px;
+            background: red;
+            width: 100%;
+            transition: all 1s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: .6;
+        }.fx .menu{
+            height: 50px;
+            opacity: .1s;
+        }
+    </style>
+</head>
+    <body>
+
+        <div class="menu"></div>
+        <h1>JavaScript</h1>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste error eligendi harum illo, aliquid unde iure similique tempora, animi architecto alias, quasi blanditiis vitae quam ex sed! Sed, commodi eius.</p>
+        
+        <script>
+
+            (function(){
+                var $menu = document.querySelector('.menu');
+
+                window.addEventListener('scroll', setupNav);
+
+                function setupNav(){
+                    var posYscroll = getYScroll();
+
+                    if(posYScroll > 100 && !hasClassFx()){
+                        console.log('adiciona');
+                        document.body.classList.add('fx');
+                    }if(posYscroll <= 100 && hasClassFx()){
+                        console.log('remove');
+                        document.body.classList.remove('fx');
+                    }
+                }
+                function getYscroll(){
+                    return window.pageYOffset;
+                }
+                function hasClassFx(){
+                    return !!document.querySelector('.fx');
+                }
+            })();
+        </script>      
+    </body>    
+</html>
