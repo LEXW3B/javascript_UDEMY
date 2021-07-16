@@ -1,7 +1,14 @@
 body{
     margin: 0;
     font-family: open Sans, sans-serif;
+    line-height: 1.4;
 }img{max-width: 100%;}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1em;
+    padding-right: 1em;
+}
 
 .header{
     background: #fff;
@@ -80,4 +87,33 @@ body{
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+
+.people-cards{
+    margin-top: 2.5em;
+}.people-cards__card{
+    
+}
+.people-cards__image{
+    width: 100%;
+}
+.people-cards__avatar{
+    margin: -55px auto;
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+}
+.people-cards__content{
+    text-align: center;
+    padding: 45px 20px 10px;
+    border-left: 1px solid #bde1e7;
+}
+.people-cards__title{
+    color: #737c85;
+    font-size: 21px;
+}
+.people-cards__text{
+    color: #929da5;
+    font-size: 14px;
 }
