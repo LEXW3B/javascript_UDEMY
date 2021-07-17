@@ -15,6 +15,10 @@ body{
     background: #fff;
     width: 100%;
 }
+.js .header{/*remove a class no js*/
+    position: fixed;
+    width: 100%;
+}
 .logo-text{
     text-transform: uppercase;
     background-color: #63c6ae;
@@ -50,7 +54,12 @@ body{
 }.header__nav a:hover{
     color: #63c6ae;
 }
-.header__btnMenu{}
+.header__btnMenu{
+    float: right;
+    margin: 1.5em;
+    background: transparent;border: none;
+    font-size: 18px;
+}
 
 .hero{
     height: 80vh;
