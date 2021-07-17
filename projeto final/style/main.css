@@ -243,6 +243,9 @@ body{
     font-weight: 600;
     text-decoration: none;
 }
+.footer__logo{
+    text-transform: uppercase;
+}
 
 @media screen and (min-width: 1024px){/*responsividade com 1024px*/
     .header{
@@ -285,6 +288,13 @@ body{
     }
     .last-articles__thumbs{
         grid-template-columns: repeat(6, 1fr);
+    }
+    .footer .container{
+        display: flex;
+    }
+    .footer .container > * {
+        margin: 1.5em;
+        text-transform: uppercase;
     }
 }
 
