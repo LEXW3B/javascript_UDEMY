@@ -1,10 +1,23 @@
 (function(){
-    //troca a classe de no-js para js
     var $body = document.querySelector('body');
     $body.classList.remove('no-js')
     $body.classList.add('js')
 
-    //remove um estilo do botão
-    var $btnMenu = document.querySelector('.header__btnMenu');
-    $btnMenu.removeAttribute('style');
+    var menu = new Menu({
+        container: '.header__nav',
+        toggleBtn: '.header__btnMenu',
+        widthEnabled: 1024
+    })
+    var carouselImgs = new Carousel({
+        container: '.laptop-slider .slideshow',
+        itens: 'figure', 
+        btnPrev: '.prev', 
+        btnNext: '.next'
+    })
+    var carouselQuotes = new Carousel({
+        container: '.quote-slideshow',
+        itens: 'figure', 
+        btnPrev: '.prev', 
+        btnNext: '.next'
+    })
 })()
