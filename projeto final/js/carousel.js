@@ -14,7 +14,7 @@ function Carousel(config){
     var _this = this;
     var _currentSlide = 0
     
-    //init()
+    //init() esse da bugg
     
     function init(){
         var _show = _this.container.querySelectorAll('.show')
