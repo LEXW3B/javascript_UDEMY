@@ -14,7 +14,7 @@ function Carousel(config){
     var _this = this;
     var _currentSlide = 0
     
-    init()
+    //init()
     
     function init(){
         var _show = _this.container.querySelectorAll('.show')
@@ -23,29 +23,35 @@ function Carousel(config){
             sh.classList.remove('show')
         })
         _this.itens[0].classList.add('.show')        
-        _this.btnPrev.removeAttribute//('style')
-        _this.btnNext.removeAttribute//('style')
+        _this.btnPrev.removeAttribute('style')
+        _this.btnNext.removeAttribute('style')
         
         addListeners()        
-    }    
+    }
+    
     function addListeners(){
         _this.btnNext.addEventListener('click', showNextSlide)
         _this.btnPrev.addEventListener('click', showPrevSlide)
-    }    
+    }
+    
     function showNextSlide(){
         _currentSlide++;
         showSlide()
-    }    
+    }
+    
     function showPrevSlide(){
         _currentSlide--;
         showSlide()
-    }    
+    }
+    
     function showSlide(){
         var qtd = _this.itens.length;
         var slide = _currentSlide % qtd;
         slide = Math.abs(slide);
         
         _this.container.querySelector('.show').classList.remove('show');
-        _this.itens[slide].classList.add('show')        
-    }    
+        _this.itens[slide].classList.add('show')
+        
+    }
+    
 }
